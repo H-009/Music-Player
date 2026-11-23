@@ -1,0 +1,40 @@
+<RCC>
+  <qresource prefix="ico">
+    <file>MusicIco/donation image2.png</file>
+    <file>MusicIco/edit.png</file>
+    <file>MusicIco/donation image.png</file>
+    <file>MusicIco/donation.png</file>
+    <file>MusicIco/like folder.png</file>
+    <file>MusicIco/back.png</file>
+    <file>MusicIco/like.png</file>
+    <file>MusicIco/like2.png</file>
+    <file>MusicIco/clock.png</file>
+    <file>MusicIco/add music.png</file>
+    <file>MusicIco/loop play.png</file>
+    <file>MusicIco/random play.png</file>
+    <file>MusicIco/single loop.png</file>
+    <file>MusicIco/interrupt.png</file>
+    <file>MusicIco/volume 0.png</file>
+    <file>MusicIco/volume 1.png</file>
+    <file>MusicIco/volume 2.png</file>
+    <file>MusicIco/volume 3.png</file>
+    <file>MusicIco/volume 4.png</file>
+    <file>MusicIco/up.png</file>
+    <file>MusicIco/import2.png</file>
+    <file>MusicIco/info.png</file>
+    <file>MusicIco/music file.png</file>
+    <file>MusicIco/music folder.png</file>
+    <file>MusicIco/import.png</file>
+    <file>MusicIco/delete.png</file>
+    <file>MusicIco/add.png</file>
+    <file>MusicIco/down.png</file>
+    <file>MusicIco/set.png</file>
+    <file>MusicIco/close.png</file>
+    <file>MusicIco/next.png</file>
+    <file>MusicIco/previous.png</file>
+    <file>MusicIco/stop.png</file>
+    <file>MusicIco/forward.png</file>
+    <file>MusicIco/retreat.png</file>
+    <file>MusicIco/play.png</file>
+  </qresource>
+</RCC>
