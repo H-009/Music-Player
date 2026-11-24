@@ -2168,20 +2168,13 @@ class MainUI(MusicUI.Ui_MusicPlayer):
 
     # 更新动画
     def update_animation(self):
-        self.animation_button = self.music_file_service.str_bool(
-            self.music_file_service.amc_read(self.path_animation_folder + "button animation.amc"))
-        self.animation_tacked_widget = self.music_file_service.str_bool(
-            self.music_file_service.amc_read(self.path_animation_folder + "stacked widget.amc"))
-        self.animation_slider_animation = self.music_file_service.str_bool(
-            self.music_file_service.amc_read(self.path_animation_folder + "slider animation.amc"))
-        self.animation_elastic_rolling = self.music_file_service.str_bool(
-            self.music_file_service.amc_read(self.path_animation_folder + "elastic rolling.amc"))
-        self.animation_list_elastic_rolling = self.music_file_service.str_bool(
-            self.music_file_service.amc_read(self.path_animation_folder + "list elastic rolling.amc"))
-        self.animation_list_item = self.music_file_service.str_bool(
-            self.music_file_service.amc_read(self.path_animation_folder + "list item.amc"))
-        self.animation_combobox_animation = self.music_file_service.str_bool(
-            self.music_file_service.amc_read(self.path_animation_folder + "combobox animation.amc"))
+        self.animation_button = self.music_file_service.str_bool(self.music_file_service.amc_read(self.path_animation_folder + "button animation.amc"))
+        self.animation_tacked_widget = self.music_file_service.str_bool(self.music_file_service.amc_read(self.path_animation_folder + "stacked widget.amc"))
+        self.animation_slider_animation = self.music_file_service.str_bool(self.music_file_service.amc_read(self.path_animation_folder + "slider animation.amc"))
+        self.animation_elastic_rolling = self.music_file_service.str_bool(self.music_file_service.amc_read(self.path_animation_folder + "elastic rolling.amc"))
+        self.animation_list_elastic_rolling = self.music_file_service.str_bool(self.music_file_service.amc_read(self.path_animation_folder + "list elastic rolling.amc"))
+        self.animation_list_item = self.music_file_service.str_bool(self.music_file_service.amc_read(self.path_animation_folder + "list item.amc"))
+        self.animation_combobox_animation = self.music_file_service.str_bool(self.music_file_service.amc_read(self.path_animation_folder + "combobox animation.amc"))
 
         # 按钮动画
         if self.animation_button:
@@ -2443,8 +2436,7 @@ class MainUI(MusicUI.Ui_MusicPlayer):
     # 初始化音量抽屉
     def init_drawer(self):
         self.music.drawer_widget.stackUnder(self.music.Play_Main_Widget)  # 抽屉放在菜单下面
-        self.music_player.set_volume(
-            int(self.music_file_service.amc_read(self.path_config_folder + "select volume.amc")))
+        self.music_player.set_volume(int(self.music_file_service.amc_read(self.path_config_folder + "select volume.amc"))/100)
         self.music.drawer_horizontalSlider.setValue(int(self.select_volume))
         # 激活一次
         self.drawer_music()
