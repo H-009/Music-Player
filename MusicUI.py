@@ -3815,7 +3815,7 @@ class Ui_MusicPlayer(object):
 "} ")
         self.Play_Main_Widget.setObjectName("Play_Main_Widget")
         self.layoutWidget10 = QtWidgets.QWidget(self.Play_Main_Widget)
-        self.layoutWidget10.setGeometry(QtCore.QRect(9, 9, 1351, 52))
+        self.layoutWidget10.setGeometry(QtCore.QRect(9, 9, 1369, 52))
         self.layoutWidget10.setObjectName("layoutWidget10")
         self.horizontalLayout_music = QtWidgets.QHBoxLayout(self.layoutWidget10)
         self.horizontalLayout_music.setContentsMargins(0, 0, 0, 0)
@@ -4001,6 +4001,35 @@ class Ui_MusicPlayer(object):
         self.like_Button.setIconSize(QtCore.QSize(25, 25))
         self.like_Button.setObjectName("like_Button")
         self.horizontalLayout_music.addWidget(self.like_Button)
+        self.lyric_Button = QtWidgets.QPushButton(self.layoutWidget10)
+        self.lyric_Button.setMaximumSize(QtCore.QSize(30, 30))
+        font = QtGui.QFont()
+        font.setFamily("黑体")
+        font.setPointSize(12)
+        self.lyric_Button.setFont(font)
+        self.lyric_Button.setStyleSheet("QPushButton\n"
+"{\n"
+"background-color:rgb(0,0,0,0);\n"
+"color:rgb(30,200,150);\n"
+"}\n"
+"\n"
+"QPushButton:disabled\n"
+"{\n"
+"color:rgb(30,200,150);\n"
+"}\n"
+"\n"
+"QPushButton::pressed\n"
+"{\n"
+"color:rgb(30,200,150);\n"
+"}")
+        self.lyric_Button.setText("")
+        icon13 = QtGui.QIcon()
+        icon13.addPixmap(QtGui.QPixmap(":/ico/MusicIco/font.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon13.addPixmap(QtGui.QPixmap(":/ico/MusicIco/font.png"), QtGui.QIcon.Disabled, QtGui.QIcon.Off)
+        self.lyric_Button.setIcon(icon13)
+        self.lyric_Button.setIconSize(QtCore.QSize(25, 25))
+        self.lyric_Button.setObjectName("lyric_Button")
+        self.horizontalLayout_music.addWidget(self.lyric_Button)
         self.clock_Button = QtWidgets.QPushButton(self.layoutWidget10)
         self.clock_Button.setMaximumSize(QtCore.QSize(30, 30))
         font = QtGui.QFont()
@@ -4023,10 +4052,10 @@ class Ui_MusicPlayer(object):
 "color:rgb(30,200,150);\n"
 "}")
         self.clock_Button.setText("")
-        icon13 = QtGui.QIcon()
-        icon13.addPixmap(QtGui.QPixmap(":/ico/MusicIco/clock.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon13.addPixmap(QtGui.QPixmap(":/ico/MusicIco/clock.png"), QtGui.QIcon.Disabled, QtGui.QIcon.Off)
-        self.clock_Button.setIcon(icon13)
+        icon14 = QtGui.QIcon()
+        icon14.addPixmap(QtGui.QPixmap(":/ico/MusicIco/clock.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon14.addPixmap(QtGui.QPixmap(":/ico/MusicIco/clock.png"), QtGui.QIcon.Disabled, QtGui.QIcon.Off)
+        self.clock_Button.setIcon(icon14)
         self.clock_Button.setIconSize(QtCore.QSize(25, 25))
         self.clock_Button.setObjectName("clock_Button")
         self.horizontalLayout_music.addWidget(self.clock_Button)
@@ -4052,10 +4081,10 @@ class Ui_MusicPlayer(object):
 "color:rgb(30,200,150);\n"
 "}")
         self.volume_Button.setText("")
-        icon14 = QtGui.QIcon()
-        icon14.addPixmap(QtGui.QPixmap(":/ico/MusicIco/volume 0.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon14.addPixmap(QtGui.QPixmap(":/ico/MusicIco/volume 0.png"), QtGui.QIcon.Disabled, QtGui.QIcon.Off)
-        self.volume_Button.setIcon(icon14)
+        icon15 = QtGui.QIcon()
+        icon15.addPixmap(QtGui.QPixmap(":/ico/MusicIco/volume 0.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon15.addPixmap(QtGui.QPixmap(":/ico/MusicIco/volume 0.png"), QtGui.QIcon.Disabled, QtGui.QIcon.Off)
+        self.volume_Button.setIcon(icon15)
         self.volume_Button.setIconSize(QtCore.QSize(25, 25))
         self.volume_Button.setObjectName("volume_Button")
         self.horizontalLayout_music.addWidget(self.volume_Button)
@@ -4081,10 +4110,10 @@ class Ui_MusicPlayer(object):
 "color:rgb(30,200,150);\n"
 "}")
         self.state_Button.setText("")
-        icon15 = QtGui.QIcon()
-        icon15.addPixmap(QtGui.QPixmap(":/ico/MusicIco/random play.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon15.addPixmap(QtGui.QPixmap(":/ico/MusicIco/random play.png"), QtGui.QIcon.Disabled, QtGui.QIcon.Off)
-        self.state_Button.setIcon(icon15)
+        icon16 = QtGui.QIcon()
+        icon16.addPixmap(QtGui.QPixmap(":/ico/MusicIco/random play.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon16.addPixmap(QtGui.QPixmap(":/ico/MusicIco/random play.png"), QtGui.QIcon.Disabled, QtGui.QIcon.Off)
+        self.state_Button.setIcon(icon16)
         self.state_Button.setIconSize(QtCore.QSize(25, 25))
         self.state_Button.setObjectName("state_Button")
         self.horizontalLayout_music.addWidget(self.state_Button)
@@ -4112,10 +4141,10 @@ class Ui_MusicPlayer(object):
 "color:rgb(30,200,150);\n"
 "}")
         self.up_Button.setText("")
-        icon16 = QtGui.QIcon()
-        icon16.addPixmap(QtGui.QPixmap(":/ico/MusicIco/previous.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon16.addPixmap(QtGui.QPixmap(":/ico/MusicIco/previous.png"), QtGui.QIcon.Disabled, QtGui.QIcon.Off)
-        self.up_Button.setIcon(icon16)
+        icon17 = QtGui.QIcon()
+        icon17.addPixmap(QtGui.QPixmap(":/ico/MusicIco/previous.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon17.addPixmap(QtGui.QPixmap(":/ico/MusicIco/previous.png"), QtGui.QIcon.Disabled, QtGui.QIcon.Off)
+        self.up_Button.setIcon(icon17)
         self.up_Button.setIconSize(QtCore.QSize(25, 25))
         self.up_Button.setObjectName("up_Button")
         self.horizontalLayout_music.addWidget(self.up_Button)
@@ -4141,10 +4170,10 @@ class Ui_MusicPlayer(object):
 "color:rgb(30,200,150);\n"
 "}")
         self.up_time_Button.setText("")
-        icon17 = QtGui.QIcon()
-        icon17.addPixmap(QtGui.QPixmap(":/ico/MusicIco/retreat.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon17.addPixmap(QtGui.QPixmap(":/ico/MusicIco/retreat.png"), QtGui.QIcon.Disabled, QtGui.QIcon.Off)
-        self.up_time_Button.setIcon(icon17)
+        icon18 = QtGui.QIcon()
+        icon18.addPixmap(QtGui.QPixmap(":/ico/MusicIco/retreat.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon18.addPixmap(QtGui.QPixmap(":/ico/MusicIco/retreat.png"), QtGui.QIcon.Disabled, QtGui.QIcon.Off)
+        self.up_time_Button.setIcon(icon18)
         self.up_time_Button.setIconSize(QtCore.QSize(25, 25))
         self.up_time_Button.setObjectName("up_time_Button")
         self.horizontalLayout_music.addWidget(self.up_time_Button)
@@ -4198,10 +4227,10 @@ class Ui_MusicPlayer(object):
 "color:rgb(30,200,150);\n"
 "}")
         self.down_time_Button.setText("")
-        icon18 = QtGui.QIcon()
-        icon18.addPixmap(QtGui.QPixmap(":/ico/MusicIco/forward.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon18.addPixmap(QtGui.QPixmap(":/ico/MusicIco/forward.png"), QtGui.QIcon.Disabled, QtGui.QIcon.Off)
-        self.down_time_Button.setIcon(icon18)
+        icon19 = QtGui.QIcon()
+        icon19.addPixmap(QtGui.QPixmap(":/ico/MusicIco/forward.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon19.addPixmap(QtGui.QPixmap(":/ico/MusicIco/forward.png"), QtGui.QIcon.Disabled, QtGui.QIcon.Off)
+        self.down_time_Button.setIcon(icon19)
         self.down_time_Button.setIconSize(QtCore.QSize(25, 25))
         self.down_time_Button.setObjectName("down_time_Button")
         self.horizontalLayout_music.addWidget(self.down_time_Button)
@@ -4227,10 +4256,10 @@ class Ui_MusicPlayer(object):
 "color:rgb(30,200,150);\n"
 "}")
         self.down_Button.setText("")
-        icon19 = QtGui.QIcon()
-        icon19.addPixmap(QtGui.QPixmap(":/ico/MusicIco/next.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon19.addPixmap(QtGui.QPixmap(":/ico/MusicIco/next.png"), QtGui.QIcon.Disabled, QtGui.QIcon.Off)
-        self.down_Button.setIcon(icon19)
+        icon20 = QtGui.QIcon()
+        icon20.addPixmap(QtGui.QPixmap(":/ico/MusicIco/next.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon20.addPixmap(QtGui.QPixmap(":/ico/MusicIco/next.png"), QtGui.QIcon.Disabled, QtGui.QIcon.Off)
+        self.down_Button.setIcon(icon20)
         self.down_Button.setIconSize(QtCore.QSize(25, 25))
         self.down_Button.setObjectName("down_Button")
         self.horizontalLayout_music.addWidget(self.down_Button)

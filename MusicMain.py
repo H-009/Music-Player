@@ -2447,7 +2447,6 @@ class MainUI(MusicUI.Ui_MusicPlayer):
         self.cover_button.setObjectName("cover_button")
         self.music.horizontalLayout_music.insertWidget(0,self.cover_button)
         self.music.music_name_Label.setAttribute(Qt.WA_TransparentForMouseEvents)
-        #self.music.horizontalLayout_music.addWidget(self.cover_button)
 
     # 初始化歌词模块
     def init_lyric_model(self):
