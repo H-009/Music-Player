@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="ico">
+    <file>MusicIco/font.png</file>
     <file>MusicIco/donation image2.png</file>
     <file>MusicIco/edit.png</file>
     <file>MusicIco/donation image.png</file>

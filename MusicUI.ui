@@ -7158,7 +7158,7 @@ background-color:rgba(30,30,30,0.5)
       <rect>
        <x>9</x>
        <y>9</y>
-       <width>1351</width>
+       <width>1369</width>
        <height>52</height>
       </rect>
      </property>
@@ -7503,6 +7503,53 @@ color:rgb(30,200,150);
          <iconset resource="MusicResources.qrc">
           <normaloff>:/ico/MusicIco/like.png</normaloff>
           <disabledoff>:/ico/MusicIco/like.png</disabledoff>:/ico/MusicIco/like.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>25</width>
+          <height>25</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="lyric_Button">
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>黑体</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton
+{
+background-color:rgb(0,0,0,0);
+color:rgb(30,200,150);
+}
+
+QPushButton:disabled
+{
+color:rgb(30,200,150);
+}
+
+QPushButton::pressed
+{
+color:rgb(30,200,150);
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="MusicResources.qrc">
+          <normaloff>:/ico/MusicIco/font.png</normaloff>
+          <disabledoff>:/ico/MusicIco/font.png</disabledoff>:/ico/MusicIco/font.png</iconset>
         </property>
         <property name="iconSize">
          <size>
