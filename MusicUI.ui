@@ -643,7 +643,7 @@ border-radius:5px;
        <property name="geometry">
         <rect>
          <x>130</x>
-         <y>690</y>
+         <y>680</y>
          <width>110</width>
          <height>35</height>
         </rect>
@@ -698,7 +698,7 @@ color:rgb(30,200,150);
        <property name="geometry">
         <rect>
          <x>132</x>
-         <y>650</y>
+         <y>640</y>
          <width>110</width>
          <height>35</height>
         </rect>
@@ -780,7 +780,7 @@ border-radius:5px;
        <property name="geometry">
         <rect>
          <x>14</x>
-         <y>690</y>
+         <y>680</y>
          <width>110</width>
          <height>35</height>
         </rect>
@@ -835,7 +835,7 @@ color:rgb(30,200,150);
        <property name="geometry">
         <rect>
          <x>14</x>
-         <y>650</y>
+         <y>640</y>
          <width>110</width>
          <height>35</height>
         </rect>
@@ -7158,7 +7158,7 @@ background-color:rgba(30,30,30,0.5)
       <rect>
        <x>9</x>
        <y>9</y>
-       <width>1369</width>
+       <width>1351</width>
        <height>52</height>
       </rect>
      </property>

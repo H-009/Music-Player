@@ -201,7 +201,7 @@ class MainUI(MusicUI.Ui_MusicPlayer):
         self.list_animators = []
         self.excluded_widgets = [self.music.play_Button, self.music.up_time_Button, self.music.down_time_Button,
                                  self.music.up_Button, self.music.down_Button,self.music.state_Button,self.music.volume_Button,
-                                 self.music.clock_Button,self.music.like_Button,self.music.interrupt_Button]
+                                 self.music.clock_Button,self.music.like_Button,self.music.interrupt_Button,self.music.lyric_Button]
         # 完成所有控件初始化后
 
         # 初始化音量抽屉
@@ -2356,7 +2356,7 @@ class MainUI(MusicUI.Ui_MusicPlayer):
             "edit": self.music.theme_edit_Button,
             "import": self.music.theme_import_Button,
             "delete": self.music.theme_down_Button,
-
+            "lyric": self.music.lyric_Button
         }
 
         # 重新读取资源
@@ -2412,6 +2412,13 @@ class MainUI(MusicUI.Ui_MusicPlayer):
         self.music_service.save_colored_images_back_to_json(self.pathfile_resources, self.theme_color)
         self.update_ico()
 
+    # 更新桌面歌词
+    def display_desktop_lyric(self):
+        if self.desktop_lyric.isHidden():
+            self.desktop_lyric.show()
+        else:
+            self.desktop_lyric.hide()
+
 
 
 
@@ -2457,11 +2464,10 @@ class MainUI(MusicUI.Ui_MusicPlayer):
             self.lyric_widget.lyricLineChanged.connect(lambda x: self.music.music_lyric_Label.setText(x))
 
 
-            # self.desktop_lyric = DesktopLyricWidget.DesktopLyricWindow()
-            # self.desktop_lyric.show()
+            self.desktop_lyric = DesktopLyricWidget.DesktopLyricWindow()
 
             # 连接桌面歌词
-            # self.lyric_widget.lyricChanged.connect(lambda x: self.desktop_lyric.set_text(x))
+            self.lyric_widget.lyricChanged.connect(lambda x: self.desktop_lyric.set_text(x))
 
             self.lyric_widget.setGeometry(370, 0, 0, 0)
             self.lyric_widget.set_custom_size(1000, 730)
@@ -2792,6 +2798,8 @@ class MainUI(MusicUI.Ui_MusicPlayer):
         self.music.state_Button.clicked.connect(self.play_mode)
         # 绑定中断播放按钮
         self.music.interrupt_Button.clicked.connect(self.music_interrupt)
+        # 绑定桌面歌词按钮
+        self.music.lyric_Button.clicked.connect(self.display_desktop_lyric)
 
         # 绑定退出按钮
         self.music.EXIT_Button.clicked.connect(self.music_service.EXIT)

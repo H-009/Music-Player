@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'MusicUI.ui'
+# Form implementation generated from reading ui file 'C:\Users\Admin_06\Desktop\Metaverse 仓库\Music-Player\MusicUI.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.11
 #
@@ -359,7 +359,7 @@ class Ui_MusicPlayer(object):
 "}")
         self.music_album_Label_2.setObjectName("music_album_Label_2")
         self.add_lyric_Button = QtWidgets.QPushButton(self.Center_Info_Page_Widget)
-        self.add_lyric_Button.setGeometry(QtCore.QRect(130, 690, 110, 35))
+        self.add_lyric_Button.setGeometry(QtCore.QRect(130, 680, 110, 35))
         self.add_lyric_Button.setMinimumSize(QtCore.QSize(110, 35))
         self.add_lyric_Button.setMaximumSize(QtCore.QSize(110, 35))
         font = QtGui.QFont()
@@ -390,7 +390,7 @@ class Ui_MusicPlayer(object):
 "}")
         self.add_lyric_Button.setObjectName("add_lyric_Button")
         self.add_cover_Button = QtWidgets.QPushButton(self.Center_Info_Page_Widget)
-        self.add_cover_Button.setGeometry(QtCore.QRect(132, 650, 110, 35))
+        self.add_cover_Button.setGeometry(QtCore.QRect(132, 640, 110, 35))
         self.add_cover_Button.setMinimumSize(QtCore.QSize(110, 35))
         self.add_cover_Button.setMaximumSize(QtCore.QSize(110, 35))
         font = QtGui.QFont()
@@ -434,7 +434,7 @@ class Ui_MusicPlayer(object):
 "}")
         self.music_artist_Label_2.setObjectName("music_artist_Label_2")
         self.senior_info_Button = QtWidgets.QPushButton(self.Center_Info_Page_Widget)
-        self.senior_info_Button.setGeometry(QtCore.QRect(14, 690, 110, 35))
+        self.senior_info_Button.setGeometry(QtCore.QRect(14, 680, 110, 35))
         self.senior_info_Button.setMinimumSize(QtCore.QSize(110, 35))
         self.senior_info_Button.setMaximumSize(QtCore.QSize(110, 35))
         font = QtGui.QFont()
@@ -465,7 +465,7 @@ class Ui_MusicPlayer(object):
 "}")
         self.senior_info_Button.setObjectName("senior_info_Button")
         self.modify_info_Button = QtWidgets.QPushButton(self.Center_Info_Page_Widget)
-        self.modify_info_Button.setGeometry(QtCore.QRect(14, 650, 110, 35))
+        self.modify_info_Button.setGeometry(QtCore.QRect(14, 640, 110, 35))
         self.modify_info_Button.setMinimumSize(QtCore.QSize(110, 35))
         self.modify_info_Button.setMaximumSize(QtCore.QSize(110, 35))
         font = QtGui.QFont()
@@ -3815,7 +3815,7 @@ class Ui_MusicPlayer(object):
 "} ")
         self.Play_Main_Widget.setObjectName("Play_Main_Widget")
         self.layoutWidget10 = QtWidgets.QWidget(self.Play_Main_Widget)
-        self.layoutWidget10.setGeometry(QtCore.QRect(9, 9, 1369, 52))
+        self.layoutWidget10.setGeometry(QtCore.QRect(9, 9, 1351, 52))
         self.layoutWidget10.setObjectName("layoutWidget10")
         self.horizontalLayout_music = QtWidgets.QHBoxLayout(self.layoutWidget10)
         self.horizontalLayout_music.setContentsMargins(0, 0, 0, 0)
