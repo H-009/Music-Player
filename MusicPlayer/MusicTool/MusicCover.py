@@ -292,3 +292,33 @@ class Service(object):
         else:
             print("错误: 无法解析图像数据")
             return QIcon()
+
+def get_mp3_cover_raw(mp3_path):
+    """
+    提取 MP3 封面原始数据
+
+    返回:
+        成功返回 bytes（原始 JPEG/PNG 数据）
+        失败返回 None
+    """
+    try:
+        try:
+            tags = ID3(mp3_path)
+        except MutagenError:
+            try:
+                tags = ID3(mp3_path, translate=False)
+            except Exception:
+                return None
+
+        if not tags:
+            return None
+
+        covers = [t for t in tags.values() if isinstance(t, APIC)]
+        if not covers:
+            return None
+
+        selected = next((c for c in covers if c.type == 3), covers[0])
+        return selected.data
+
+    except Exception:
+        return None

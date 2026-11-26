@@ -1,7 +1,7 @@
 import shutil
 
 from PyQt5.QtWidgets import QApplication, QMainWindow, QComboBox, QPushButton, QFileDialog, QListWidget, QListView,QWidget
-from PyQt5.QtGui import QPixmap, QIcon, QPixmapCache
+from PyQt5.QtGui import QPixmap, QIcon, QPixmapCache, QImage
 from PyQt5.QtCore import Qt, QThread, QByteArray
 from BlurWindow.blurWindow import GlobalBlur
 
@@ -286,35 +286,12 @@ class MainUI(MusicUI.Ui_MusicPlayer):
     def update_details_cover(self):
         music_name = self.music_file_service.amc_read(self.path_config_folder + 'select music.amc')
 
-        # 选取的封面不存在
-        if not os.path.exists(self.path_cover + self.path_playlist + "/" + music_name + '.png'):
-            if not os.path.exists(self.path_cover + self.path_playlist):
-                # 创建文件夹
-                self.music_folder_service.create_directory(self.path_cover + self.path_playlist)
-
-            # 不存在则提取
-            self.music_cover_image = self.music_cover_service.get_mp3_cover(
-                self.path_playlist_folder + self.path_playlist + '/' + music_name + '.mp3',
-                self.path_cover + self.path_playlist + '/', music_name)
-
-            self.music_image_png = QPixmap(self.path_cover + self.path_playlist + "/" + music_name + '.png')
-            self.music.details_cover_Label.setPixmap(self.music_image_png)
-            self.music.details_cover_Label.setScaledContents(True)
-            self.cover_button.set_image(self.music_image_png)
-
-            # 未提取到封面
-            if self.music_cover_image is None:
-                self.music_cover_service.new_mp3_cover(music_name, self.path_cover + self.path_playlist + '/')
-                self.music_image_png = QPixmap(self.path_cover + self.path_playlist + "/" + music_name + '.png')
-                self.music.details_cover_Label.setPixmap(self.music_image_png)
-                self.music.details_cover_Label.setScaledContents(True)
-                self.cover_button.set_image(self.music_image_png)
-        # 存在则使用
-        else:
-            self.music_image_png = QPixmap(self.path_cover + self.path_playlist + "/" + music_name + '.png')
-            self.music.details_cover_Label.setPixmap(self.music_image_png)
-            self.music.details_cover_Label.setScaledContents(True)
-            self.cover_button.set_image(self.music_image_png)
+        cover = MusicCover.get_mp3_cover_raw(self.path_playlist_folder + self.path_playlist + '/' + music_name + '.mp3')
+        image = QImage.fromData(cover)
+        self.music_image_png = QPixmap.fromImage(image)
+        self.music.details_cover_Label.setPixmap(self.music_image_png)
+        self.music.details_cover_Label.setScaledContents(True)
+        self.cover_button.set_image(self.music_image_png)
 
     # 更新歌曲播放时长 拖动
     def music_update_time(self):
