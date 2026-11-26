@@ -223,21 +223,20 @@ class MainUI(MusicUI.Ui_MusicPlayer):
 
     # 更新画布
     def Music_Update(self, model):
-        if model == "Music_Song":
+        if model == "Center_Info":
+            self.music_widget_service.toggle_buttons(self.music_center_buttons, self.music.info_Button)
+            self.music.Center_StackedWidget.setCurrentIndex(0)
+            self.music_update_details()
+
+        elif model == "Music_Song":
             self.music_widget_service.toggle_buttons(self.music_center_buttons, self.music.song_Button)
             self.music.Center_StackedWidget.setCurrentIndex(2)
-            self.music_update_song()
-            self.music_update_playlist()
 
         elif model == "Music_Collect":
             self.music_widget_service.toggle_buttons(self.music_center_buttons, self.music.collect_Button)
             self.music.Center_StackedWidget.setCurrentIndex(3)
             self.music_update_collect()
 
-        elif model == "Center_Info":
-            self.music_widget_service.toggle_buttons(self.music_center_buttons, self.music.info_Button)
-            self.music.Center_StackedWidget.setCurrentIndex(0)
-            self.music_update_details()
         elif model == "Center_Set":
             self.music_widget_service.toggle_buttons(self.music_center_buttons, self.music.set_Button)
             self.music.Center_StackedWidget.setCurrentIndex(4)
@@ -524,8 +523,8 @@ class MainUI(MusicUI.Ui_MusicPlayer):
             # 解锁写入锁
             self.write_lock = True
 
-            # 更新
-            self.Music_Update("Music_Song")
+            # 更新歌单歌曲
+            self.music_update_song()
 
         except Exception as a:
             print(a)
@@ -2923,6 +2922,10 @@ class MainUI(MusicUI.Ui_MusicPlayer):
 
         # 更新图标
         self.update_ico()
+
+        # 只初始化一次
+        self.music_update_song()
+        self.music_update_playlist()
 
         # 显示窗口
         self.Main.show()
